@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "ta5ke15a-db",
+    "database": "taskdb",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "docker": {
+    "username": "root",
+    "password": "ta5ke15a-db",
+    "database": "taskdb",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "taskdb_pro",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

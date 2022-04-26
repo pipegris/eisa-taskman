@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  api:
+    image: eisa/taskman-api
+    container_name: taskman-api
+    build: ./api
+    command: npm run serve-docker
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api:/app/
+      - /app/node_modules
+    networks:
+      - tasknet
+    restart: on-failure
+    depends_on:
+      - db
+networks:
+  tasknet:
+    driver: bridge
