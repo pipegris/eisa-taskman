@@ -1,6 +1,6 @@
 <template>
   <div class="submit-form">
-    <div v-if="!submitted">
+    <div>
       <div class="form-group">
         <label for="title">Title</label>
         <input
@@ -33,10 +33,6 @@
       </div>
       <button @click="saveTask" class="btn btn-success">Submit</button>
     </div>
-    <div v-else>
-      <h4>You submitted your task successfully!</h4>
-      <button class="btn btn-success" @click="newTask">Add</button>
-    </div>
   </div>
 </template>
 <script>
@@ -55,7 +51,6 @@ export default {
         status: "",
         expiration: null,
       },
-      submitted: false,
     };
   },
   methods: {
@@ -69,7 +64,12 @@ export default {
         .then((response) => {
           this.task.id = response.data.id;
           console.log(response.data);
-          this.submitted = true;
+          this.$notify({
+            title: "Success!",
+            text: "The Task was created successfully!",
+            type: "success",
+          });
+          this.$router.push({ name: "task-list" });
         })
         .catch((e) => {
           e.response.data.errors.forEach((element) => {
@@ -88,7 +88,6 @@ export default {
     },
 
     newTask() {
-      this.submitted = false;
       this.task = {};
     },
   },
