@@ -38,7 +38,7 @@ Mysql database
 
 # Installation and local environment
 ## Backend services with docker
-The project comes with all the configuration files needed to run the services needed using docker and docker-compose.
+The project comes with all the configuration files needed to run the backend services using docker and docker-compose.
 Having installed both tools (docker and docker-compose), the backend services can be brought up by running the next command in the root directory:
 	
 	docker-compose -f docker-compose.yml -f docker-compose-api.yml up
@@ -64,7 +64,7 @@ With this you'll have the frontend SPA running on http://localhost:3000
 ## Database
 The credentials needed by the api in order to connect with the database can be set in api/config/config.json, under the key "*development*".
 ### Migrations and seeders
-There's a migration (api/migrations) to create the table and a seeder (api/seeders) to populate a couple of dummy records.
+There's a migration (api/migrations) to create the table and a seeder (api/seeders) to populate the table with a couple of dummy records.
  
 	npx sequelize-cli db:migrate
 	npx sequelize-cli db:seed:all
