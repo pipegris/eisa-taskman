@@ -1,14 +1,14 @@
 {
   "name": "express",
   "version": "1.0.0",
-  "description": "Task manager api",
+  "description": "It's Growing app! Web services",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
     "serve-docker": "NODE_ENV=docker nodemon server.js"
   },
   "keywords": [],
-  "author": "Andrés Felipe Grisales",
+  "author": "Andrés Felipe Grisales, Carlos Ramírez, Daniela Parra",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

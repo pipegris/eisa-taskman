@@ -9,8 +9,8 @@ app.use(cors())
 
 app.use(express.json())
 
-const taskRouter =  require('./routes/task')
+const readingRouter =  require('./routes/reading')
 
-app.use('/task', taskRouter)
+app.use('/reading', readingRouter)
 
 app.listen(PORT)

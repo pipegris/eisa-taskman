@@ -2,34 +2,40 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Task extends Model {
+  class Reading extends Model {
 
     static associate(models) {
       // define association here
     }
   }
-  Task.init({
+  Reading.init({
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    title: {
-      allowNull: false,
-      type: DataTypes.STRING
+    temperature: {
+      allowNull: true,
+      type: DataTypes.FLOAT
     },
-    status: {
-      allowNull: false,
-      type: DataTypes.STRING
+    moisture: {
+      allowNull: true,
+      type: DataTypes.INTEGER
     },
-    expiration: {
+    level: {
       allowNull: true,
       type: DataTypes.DATE
+    },
+    createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE
     }
   }, {
     sequelize,
-    modelName: 'task'
+    modelName: 'reading',
+    freezeTableName: true,
+    updatedAt: false
   });
-  return Task;
+  return Reading;
 };
