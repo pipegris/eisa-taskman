@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   api:
-    image: eisa/taskman-api
-    container_name: taskman-api
+    image: itsgrowingapp_api
+    container_name: itsgrowingapp_api
     build: ./api
     command: npm run serve-docker
     ports:
@@ -11,7 +11,7 @@ services:
       - ./api:/app/
       - /app/node_modules
     networks:
-      - tasknet
+      - itsgrowingapp_net
     restart: on-failure
     depends_on:
       - db

@@ -1,22 +1,22 @@
 {
   "development": {
     "username": "root",
-    "password": "ta5ke15a-db",
-    "database": "taskdb",
+    "password": "1t5gr0w1ng4pp-b6",
+    "database": "itsgrowingapp_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "docker": {
     "username": "root",
-    "password": "ta5ke15a-db",
-    "database": "taskdb",
+    "password": "1t5gr0w1ng4pp-b6",
+    "database": "itsgrowingapp_db",
     "host": "db",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "taskdb_pro",
+    "database": "itsgrowingapp_db_pro",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
